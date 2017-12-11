@@ -1,11 +1,17 @@
 doctype! html
 html
 	head
-		title testing
+		meta(charset="utf-8")
+		title Chat | ChatApp
+		meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+		link( rel="stylesheet" href="/css/styles.css")
 		link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
-	body
+	body(class="chat")
 		block content
 		script(src='/bower_components/jquery/dist/jquery.min.js')
 		script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
 		script(src='/socket.io/socket.io.js')
-		script(src='/js/index.js')
+		script( src="/js/libs/moment.js")
+		script(src="/js/libs/mustache.js")
+		script(src="/js/libs/deparam.js")
+		script(src='/js/chat.js')

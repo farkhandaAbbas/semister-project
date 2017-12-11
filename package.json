@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
-"engine":"9.0.0",
-  "author": "",
+  "engine": "9.0.0",
+  "author": "farkhanda",
   "license": "ISC",
   "dependencies": {
     "body": "^5.1.0",
@@ -18,13 +19,19 @@
     "express-session": "^1.15.6",
     "express-validator": "^4.3.0",
     "lodash": "^4.17.4",
-    "mocha": "^4.0.1",
+    "moment": "^2.19.2",
     "mongodb": "^2.2.33",
     "mongoose": "^4.13.0",
+    "nodemon": "^1.12.1",
     "parser": "^0.1.4",
     "pug": "^2.0.0-rc.4",
     "requests": "^0.2.2",
     "socket.io": "^2.0.4",
     "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "expect.js": "^0.3.1",
+    "mocha": "^3.0.2"
   }
 }

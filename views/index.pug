@@ -1,3 +1,26 @@
-extend layout
-block content
-	h1.text-uppercase welcome to the  chat app
+<!DOCTYPE html>
+html
+	head
+		meta(charset="utf-8")
+		title Chat | ChatApp
+		meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+		link( rel="stylesheet" href="/css/styles.css")
+		link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+	body(class="centered-form")
+		.container
+			.col-md-12
+				p.text.text-capitalize welcome to chat app. friend!!!  fun!!!!  enjoyment !!!!!! chill !!!!!! everything is good when its with in the limitation define by your creator dudes.enjoy being with friends but don't froget the one who created you and others. Guys say what you have !!!!!!!!!!!!! have fun.
+			.col-md-4.col-md-offset-4
+				.my-form
+					form(action="/chat")
+						.form-group
+							label.text.text-uppercase Display name
+							input.form-control(type="text" name="name" autofocus)
+						.form-group
+							label.text.text-uppercase Room name
+				
+							input.form-control(type="text" name="room")
+						.form-group
+							button.text.text-uppercase.btn.btn-primary.btn-block.btn-lg Join
+   
+

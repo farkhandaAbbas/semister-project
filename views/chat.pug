@@ -1,0 +1,40 @@
+extend layout
+block content
+	.container
+		.col-md-4
+			.chat__sidebar
+				h3 People
+				div.text-capitalize(id="users")
+		.col-md-8
+			.chat__main
+				ol(id='messages' class="chat__messages")
+			
+		.col-md-12
+			.chat__footer
+				form.form-group(id='message-form')
+					input.form-control(name='message',type='text',placeholder='message')
+					br
+					button.text-uppercase.btn.btn-primary send
+			button.text-uppercase.btn.btn-primary(id='send-location') send location
+	script(id="message-template" type="text/template")
+		li(class="message")
+			div(class="message__title")
+				h4 {{from}}
+				span {{createdAt}}
+			div( class="message__body")
+				p {{text}}
+
+	script(id="location-message-template" type="text/template")
+		li(class="message")
+			div(class="message__title")
+				h4 {{from}}
+				span {{createdAt}}
+			div(class="message__body")
+				p
+					a(href="{{url}}" target="_blank") My current location
+	
+
+     
+     
+		
+
